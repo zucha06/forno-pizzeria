@@ -1,0 +1,109 @@
+    <!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FORNO — rzemieślnicza pizza, świeże składniki i włoski klimat. Sprawdź nasze menu!">
+  <title>FORNO — Pizza i nie tylko</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="pizzeria.css">
+  <script src="pizzeria.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="logo" href="#home" aria-label="FORNO — strona główna"><span class="logo-mark">F</span><span>FORNO<span class="logo-dot">.</span><small>PIZZA I NIE TYLKO!</small></span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Otwórz menu" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#menu">Menu</a><a href="#about">Nasza historia</a><a href="#contact">Kontakt</a>
+      <button class="cart-button" id="openCart">Koszyk <span id="cartCount">0</span></button>
+    </nav>
+  </header>
+     
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="eyebrow"><span></span> SMAK, KTÓRY ŁĄCZY</p>
+        <h1>Trochę Włoch.<br><em>Dużo miłości.</em></h1>
+        <p class="hero-copy">Ręcznie wyrabiane ciasto, najlepsze składniki i pizza prosto z pieca. Tak smakuje chwila tylko dla Ciebie.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#menu">Odkryj menu <span>↗</span></a><a class="text-link" href="#about">Poznaj FORNO <span>→</span></a></div>
+        <div class="hero-note"><span class="note-icon">✦</span><span><strong>24 h</strong><small>fermentacji ciasta</small></span><span class="note-divider"></span><span><strong>100%</strong><small>świeżych składników</small></span></div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-placeholder"><span class="image-symbol">✳</span><img src="head.jpg"></div>
+        <div class="round-stamp"><span>TWORZYMY Z</span><strong>♥</strong><span>PASJĄ</span></div>
+        <div class="hero-caption"><span class="caption-line"></span><span>PROSTO Z PIECA</span></div>
+      </div>
+      <div class="hero-bottom"><span>01 / 03</span><span class="bottom-line"></span><span>ODKRYJ WIĘCEJ ↓</span></div>
+    </section>
+
+    <section class="menu-section section-pad" id="menu">
+      <div class="section-heading">
+        <div><p class="eyebrow"><span></span> COŚ PYSZNEGO</p><h2>Nasze <em>menu.</em></h2></div>
+        <p>Proste składniki. Dopracowane receptury.<br>Smak, do którego chce się wracać.</p>
+      </div>
+      <div class="filter-row" role="group" aria-label="Filtruj menu">
+        <button class="filter active" data-filter="all">Wszystkie <span>06</span></button>
+        <button class="filter" data-filter="classic">Klasyki</button>
+        <button class="filter" data-filter="signature">Autorskie</button>
+        <button class="filter" data-filter="veggie">Wege</button>
+      </div>
+      <div class="pizza-grid" id="pizzaGrid">
+        <article class="pizza-card" data-category="classic" data-id="margherita" data-name="Margherita" data-price="29">
+          <div class="pizza-photo photo-one"><span class="photo-placeholder"><img src="capri.jpg"></span></div>
+          <div class="pizza-info"><div><h3>Margherita</h3><p>San Marzano, mozzarella, bazylia</p></div><div class="pizza-bottom"><strong>29 zł</strong><button class="add-button" aria-label="Dodaj Margheritę do koszyka">+</button></div></div>
+        </article>
+        <article class="pizza-card" data-category="classic" data-id="diavola" data-name="Diavola" data-price="36">
+          <div class="pizza-photo photo-two"><span class="photo-placeholder"><img src="capri.jpg"></span><span class="pizza-number">02</span></div>
+          <div class="pizza-info"><div><h3>Diavola <span class="hot">✦</span></h3><p>Salami piccante, mozzarella, chili</p></div><div class="pizza-bottom"><strong>36 zł</strong><button class="add-button" aria-label="Dodaj Diavolę do koszyka">+</button></div></div>
+        </article>
+        <article class="pizza-card" data-category="signature" data-id="prosciutto" data-name="Prosciutto e Rucola" data-price="39">
+          <div class="pizza-photo photo-three"><span class="photo-placeholder"><img src="capri.jpg"></span><span class="pizza-number">03</span></div>
+          <div class="pizza-info"><div><h3>Prosciutto e Rucola</h3><p>Prosciutto crudo, rukola, grana padano</p></div><div class="pizza-bottom"><strong>39 zł</strong><button class="add-button" aria-label="Dodaj Prosciutto e Rucola do koszyka">+</button></div></div>
+        </article>
+        <article class="pizza-card" data-category="veggie" data-id="verde" data-name="Verde" data-price="34">
+          <div class="pizza-photo photo-four"><span class="photo-placeholder"><img src="capri.jpg"></span><span class="pizza-number">04</span></div>
+          <div class="pizza-info"><div><h3>Verde</h3><p>Cukinia, szpinak, pesto, mozzarella</p></div><div class="pizza-bottom"><strong>34 zł</strong><button class="add-button" aria-label="Dodaj Verde do koszyka">+</button></div></div>
+        </article>
+        <article class="pizza-card" data-category="signature" data-id="truffle" data-name="Tartufo" data-price="42">
+          <div class="pizza-photo photo-five"><span class="photo-placeholder"><img src="capri.jpg"></span><span class="pizza-number">05</span></div>
+          <div class="pizza-info"><div><h3>Tartufo</h3><p>Krem truflowy, pieczarki, grana padano</p></div><div class="pizza-bottom"><strong>42 zł</strong><button class="add-button" aria-label="Dodaj Tartufo do koszyka">+</button></div></div>
+        </article>
+        <article class="pizza-card" data-category="veggie" data-id="quattro" data-name="Quattro Formaggi" data-price="38">
+          <div class="pizza-photo photo-six"><span class="photo-placeholder"><img src="capri.jpg"></span><span class="pizza-number">06</span></div>
+          <div class="pizza-info"><div><h3>Quattro Formaggi</h3><p>Gorgonzola, mozzarella, taleggio, grana</p></div><div class="pizza-bottom"><strong>38 zł</strong><button class="add-button" aria-label="Dodaj Quattro Formaggi do koszyka">+</button></div></div>
+        </article>
+      </div>
+      <p class="menu-footnote">* Wszystkie pizze mają około 32 cm. Ceny i menu są przykładowe.</p>
+    </section>
+
+    <section class="story-section" id="about">
+      <div class="story-visual"><div class="story-photo-placeholder"><span>✳</span><img src="piec.jpg"></div><div class="story-tag">BUON<br>APPETITO!</div></div>
+      <div class="story-copy"><p class="eyebrow"><span></span> NASZA HISTORIA</p><h2>Nie robimy<br>na skróty. <em>Robimy<br>z sercem.</em></h2><p>Zaczęło się od podróży do Neapolu, małego pieca i wielkiej miłości do włoskiej kuchni. Dziś tę samą pasję wkładamy w każdą pizzę, którą podajemy.</p><p>Ciasto dojrzewa powoli, sos robimy z pomidorów, a składniki wybieramy tak, jakbyśmy gotowali dla własnej rodziny.</p><a href="#contact" class="text-link">Wpadnij do nas <span>→</span></a></div>
+    </section>
+
+    <section class="cta-section"><p class="eyebrow"><span></span> DOBRY WIECZÓR ZACZYNA SIĘ TUTAJ</p><h2>Masz ochotę na<br><em>coś wyjątkowego?</em></h2><a class="button button-light" href="#menu">Wybierz swoją pizzę <span>↗</span></a><div class="cta-decoration">FORNO</div></section>
+
+    <section class="contact-section section-pad" id="contact">
+      <div class="section-heading"><div><p class="eyebrow"><span></span> ZNAJDŹ NAS</p><h2>Do zobaczenia <em>przy stole.</em></h2></div><p>Najlepsza pizza smakuje jeszcze lepiej<br>w dobrym towarzystwie.</p></div>
+      <div class="contact-grid">
+        <div class="contact-item"><span class="contact-icon">⌖</span><h3>Odwiedź nas</h3><p>ul. Przykładowa 12<br>00-001 Warszawa</p></div>
+        <div class="contact-item"><span class="contact-icon">◷</span><h3>Godziny otwarcia</h3><p>Pon–Czw: 12:00–23:00<br>Pt–Nd: 12:00–21:00</p></div>
+        <div class="contact-item"><span class="contact-icon">✆</span><h3>Zadzwoń</h3><p><a href="tel:+48123456789">+48 123 456 789</a><br>hello@forno.example</p></div>
+      </div>
+      <p class="demo-note">To projekt demonstracyjny — adres, telefon i e-mail są przykładowe.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><a class="logo footer-logo" href="#home"><span class="logo-mark">F</span><span>FORNO<span class="logo-dot">.</span><small>PIZZA & MORE</small></span></a><p>Dobry smak. Dobre chwile.</p><span>© <span id="year"></span> FORNO. Projekt portfolio.</span></footer>
+
+  <div class="cart-backdrop" id="cartBackdrop"></div>
+  <aside class="cart-panel" id="cartPanel" aria-label="Koszyk" aria-hidden="true">
+    <div class="cart-header"><div><p class="eyebrow">TWOJE ZAMÓWIENIE</p><h2>Koszyk <em>smaków.</em></h2></div><button class="close-cart" id="closeCart" aria-label="Zamknij koszyk">×</button></div>
+    <div class="cart-items" id="cartItems"><div class="empty-cart"><span>＋</span><p>Twój koszyk jest pusty.</p><small>Dodaj coś pysznego z naszego menu.</small></div></div>
+    <div class="cart-footer"><div class="cart-total"><span>Razem</span><strong id="cartTotal">0 zł</strong></div><button class="button button-primary checkout-button" id="checkoutButton">Przejdź dalej <span>↗</span></button><small>Demo portfolio — zamówienie nie zostanie wysłane.</small></div>
+  </aside>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
