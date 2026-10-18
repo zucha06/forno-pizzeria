@@ -3,7 +3,7 @@
 An example, responsive pizzeria website created in HTML, CSS, and pure JavaScript.
 
 ## Launch
-Open `pizzeria.html` in your browser. No dependencies or server installation required.
+Open `index.html` in your browser. No dependencies or server installation required.
 
 ## Features
 - Responsive layout on desktop and mobile
